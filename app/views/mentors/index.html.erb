@@ -4,6 +4,13 @@
 
 <h1>Mentoras</h1>
 
+<h2>Pesquisa</h2>
+<%= form_with url: mentors_path, method: :get, local: true do |form| %>
+    <%= form.label :search, "Pesquisar por nome ou email"%>
+    <%= form.text_field :search, value: params[:search]%>
+    <%= form.submit "Pesquisar"%>
+<%end%>
+
 <div id="mentors">
   <table border="1" cellpadding="10">
   <thead>
